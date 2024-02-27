@@ -3,6 +3,8 @@
     1. Two textBox
     2. Two Button
     3. One Paragraph
+    Create a function which fetch value from textbox and display sum of both number in textbox.
+    display sum in alert then in paragraph
 -->
 
 <!DOCTYPE html>
@@ -13,6 +15,19 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <label>Enter First number</label>
+    <input type="text" id="t1"><br>
+    <label>Enter Second number</label>
+    <input type="text" id="t2"><br>
+    <button onclick="Addition()">add</button> 
+    <h1 id="p1">sum = </h1>
+    <script>
+        function Addition(){
+            let val1 = document.getElementById('t1').value;
+           let val2 = document.getElementById('t2').value;
+           let c = Number(val1)+Number(val2);
+           document.getElementById('p1').innerText = "sum = " + c;
+        }
+    </script>
 </body>
 </html>

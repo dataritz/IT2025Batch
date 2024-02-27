@@ -6,6 +6,33 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <label>Enter First number</label>
+    <input type="text" id="t1"><br>
+    <label>Enter Second number</label>
+    <input type="text" id="t2"><br>
+    <button onclick="operation('+')">add</button> 
+    <button onclick="operation('*')">mul</button>
+    <button onclick="operation('/')">div</button>
+    <button onclick="operation('**')">pow</button>
+    <h1 id="p1">result =  </h1>
+    <script>
+        function operation(opr){
+            let val1 = document.getElementById('t1').value;
+           let val2 = document.getElementById('t2').value;
+           let c;
+            switch(opr){
+                case '+':c = Number(val1)+Number(val2);
+                break;
+                case '*':c = Number(val1)*Number(val2);
+                break;
+                case '/':c = Number(val1)/Number(val2);
+                break;
+                case '**':c = Number(val1)**Number(val2);
+                break;
+            }
+
+           document.getElementById('p1').innerText = "result =  " + c;
+        }
+    </script>
 </body>
 </html>

@@ -1,0 +1,32 @@
+<!--
+    Create a web Page in which you have to create a 5 button named 1,2,3,4,5 
+    and create a table() which display table in console. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            border: 4px solid red;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="table(2)">2</button>
+    <button onclick="table(3)">3</button>
+    <button onclick="table(4)">4</button>
+    <button onclick="table(5)">5</button>
+    <button onclick="table(6)">6</button>
+    <script>
+        function table(n){
+            for(i=1;i<=10;i++)
+                console.log(n*i)
+    }
+    </script>
+    
+</body>
+</html>

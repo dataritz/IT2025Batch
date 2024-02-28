@@ -1,0 +1,22 @@
+<!--Function with n arguments-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="sum1(1,2,3,4,5)">Click Me</button>
+    <script>
+        function sum1(...n){
+            let sum=0;
+            for(i=0;i<n.length;i++)
+                sum+=n[i];
+            console.log(sum);
+        }
+
+    </script>
+    
+</body>
+</html>

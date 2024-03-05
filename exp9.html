@@ -1,0 +1,19 @@
+<!-- Change Style-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <p id="p1" onclick="changeP()">I am from ABESIT.</p>
+    <script>
+        function changeP(){
+            let elm = document.querySelector('#p1');
+            elm.setAttribute('style','color:red;border:2px solid blue;background-color:grey')
+        }
+    </script>
+</body>
+</html>

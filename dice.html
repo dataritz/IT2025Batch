@@ -1,0 +1,29 @@
+<!-- Create a web Page for dice (Ludo)-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="image/dice1.gif" alt="dice" width="15%" onclick="generateN()">
+    <button onclick="generateN2()" id="b1">Roll The dice</button>
+    <h4 id="dice"></h4>
+    <img src="image/dice1.gif" onclick="generateN3()" width="15%" id="im">
+    <script>
+        function generateN(){
+            let val = Math.floor(Math.random()*6)+1;
+            document.getElementById('dice').innerText = val;
+        }
+        function generateN2(){
+            let val = Math.floor(Math.random()*6)+1;
+            document.getElementById('b1').innerText = val;
+        }
+        function generateN3(){
+            let val = Math.floor(Math.random()*6)+1;
+            document.getElementById('im').setAttribute('src',`image/${val}.png`);
+        }
+    </script>
+</body>
+</html>

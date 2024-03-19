@@ -1,0 +1,25 @@
+# Dice Game
+
+This is a simple dice game implemented using HTML, CSS, and JavaScript. It allows players to roll two dice and see the result.
+
+## How to Play
+
+1. Clone or download this repository to your local machine.
+2. Open the `index.html` file in your web browser.
+3. Click the "Roll Dice" button to roll the dice.
+4. The result of the roll will be displayed on the screen.
+
+## Files
+
+- `index.html`: Contains the HTML structure of the dice game.
+- `styles.css`: Defines the styles for the game interface.
+- `script.js`: Contains the JavaScript code for rolling the dice and updating the result.
+
+## Customization
+
+- You can modify the CSS styles in `styles.css` to change the appearance of the game interface.
+- To add additional features or modify the game logic, you can edit the JavaScript code in `script.js`.
+
+## Credits
+
+This project was created by Himanshu Vashistha.

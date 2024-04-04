@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" placeholder="enter rollnumber" id="t1">
+  <button onclick="display()">Display</button>
+  <p id="p1">
+
+  </p>
+  <script>
+     let listofstu = {
+      1:{name:'Ram',branch:'IT'},
+      2:{name:'Laxman',branch:'IT'},
+      3:{name:'Hanuman',branch:'CSE'},
+      4:{name:'Rahul',branch:'IT'},
+      5:{name:'Gopal',branch:'CSDS'}
+    };
+    function display(){
+      let val = document.querySelector('#t1').value;
+      if(listofstu[val]!=undefined)
+      document.querySelector('#p1').innerHTML = listofstu[val]['name'] + " "  +listofstu[val]['branch'];
+    else
+    document.querySelector('#p1').innerHTML = "Record not found";
+    }
+  </script>
+</body>
+</html>

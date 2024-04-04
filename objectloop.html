@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <table border="2" id="t">
+    <tr>
+      <th>Name</th>
+      <th>Branch</th>
+    </tr>
+
+  </table>
+  <button onclick="add()">Click to add data</button>
+  <script>
+    let listofstu = {
+      1:{name:'Ram',branch:'IT'},
+      2:{name:'Laxman',branch:'IT'},
+      3:{name:'Hanuman',branch:'CSE'},
+      4:{name:'Rahul',branch:'IT'},
+      5:{name:'Gopal',branch:'CSDS'}
+    };
+    function add(){
+      for(let k in listofstu){
+        let row = document.createElement('tr');
+        let col1 = document.createElement('td');
+        let col2 = document.createElement('td');
+        col1.innerHTML = listofstu[k]['name'];
+        col2.innerHTML = listofstu[k]['branch'];
+        if(k%2==0)
+          row.setAttribute('style','background-color:green');
+        else
+          row.setAttribute('style','background-color:yellow');
+        row.append(col1);
+        row.append(col2);
+        document.querySelector('#t').append(row);
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="d1">
+
+  </div>
+  <button onclick="add()">Click to add</button>
+  <script>
+    let val = 1;
+    function add(){
+      let para = document.createElement('p');
+      let x = 'I am para-' + val++;
+      para.innerHTML = `${x}`;
+      let parnt = document.querySelector('#d1');
+      parnt.append(para);
+
+    }
+  </script>
+</body>
+</html>

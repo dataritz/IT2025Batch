@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids Game</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th> Action </th>
+            <th>Output</th>
+        </tr>
+        <tr>
+            <td>Dice</td>
+            <td><button onclick="dice()">Roll</button></td>
+            <td id="p1"></td>
+        </tr>
+        <tr>
+            <td>OTP-6digit</td>
+            <td><button onclick="Otp()">Click</button></td>
+            <td id="p2"></td>
+        </tr>
+        <tr>
+            <td>Today's Dinner</td>
+            <td><button onclick="Dinner()">Click</button></td>
+            <td id="p3"></td>
+        </tr>
+        <tr>
+            <td>today's quote</td>
+            <td><button onclick="quote()">Click</button></td>
+            <td id="p4"></td>
+        </tr>
+        <tr>
+            <td>Rock paper scissors</td>
+            <td>
+                <button onclick="rps(1)">Rock</button>
+                <button onclick="rps(2)">Paper</button>
+                <button onclick="rps(3)">Scissors</button>
+            </td>
+            <td id="p5"></td>
+        </tr>
+    </table>
+    <script>
+        function rps(user){
+            let comp = Math.floor(Math.random()*3)+1
+            if(user==comp){
+                document.getElementById('p5').innerText = "tie";
+            }
+            else if(user==1 && comp==2 || user==2&& comp==3 || user==3 && comp==1)
+            document.getElementById('p5').innerText = "Computer win";
+            else
+            document.getElementById('p5').innerText = "User Win";
+        }
+        function dice(){
+            let x = Math.floor(Math.random()*6)+1
+            document.getElementById('p1').innerText = x;
+        }
+        function Otp(){
+            let x = Math.floor(Math.random()*(999999-100000)+1)+1
+            document.getElementById('p2').innerText = x;
+        }
+
+        function Dinner(){
+            let arrMenu = ['Burger','Chiily-Patato','Chawmin','Piza','Momos','Pasta','Chole-Kulche','Chole-Bhature','Idli','Dhosa','Sandwich','Paneer-Tikka','Rajma-Chawal','Khadi-chawal'];
+            let l = arrMenu.length;
+            let i = Math.floor(Math.random()*l);
+            console.log(i);
+            document.getElementById('p3').innerText = arrMenu[i];
+        }
+        function quote(){
+            let arrMenu = ['All that glitters is not gold.','All the world’s a stage, and all the men and women merely players.','Eighty percent of success is showing up.','Elementary, my dear Watson.','Frankly, my dear', "I don't give a damn.",'Go ahead, make my day.'];
+            let l = arrMenu.length;
+            let i = Math.floor(Math.random()*l);
+            console.log(i);
+            document.getElementById('p4').innerText = arrMenu[i];
+        }
+
+    </script>
+</body>
+</html>

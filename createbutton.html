@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="d1">
+
+  </div>
+  <button onclick="add()">Click to add</button>
+  <script>
+    let val=1;
+    function add(){
+      let ele  = document.createElement('button');
+      ele.innerHTML = 'click'
+      ele.setAttribute('style','color:red;');
+      let x = 'btn'+  val++;
+      ele.setAttribute('id',`${x}`);
+      let parnt = document.querySelector('#d1');
+      parnt.append(ele);
+    }
+  </script>
+</body>
+</html>
